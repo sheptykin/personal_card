@@ -34,6 +34,7 @@ public class EditActivity extends Activity {
 	        case R.layout.activity_main:
 	        	this.setContentView(R.layout.edit_main);
 	        	break;
+	        //cases of layout edits
 	        }
 	        
 	        this.initTextEdits();
