@@ -15,12 +15,26 @@
         android:layout_centerVertical="false"
         android:layout_weight="0.28"
         android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="education:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="20dp"
+            android:textStyle="italic" />
 
         <EditText
+            android:id="@+id/editUniversity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:ems="10"
+            android:gravity="center_horizontal"
             android:text="University"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="16dp"
@@ -30,10 +44,12 @@
         </EditText>
 
         <EditText
+            android:id="@+id/editSpeciality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:ems="10"
+            android:gravity="center_horizontal"
             android:text="speciality"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="16dp" />
@@ -60,36 +76,42 @@
             android:textSize="20dp"
             android:textStyle="italic" />
 
-      
-
         <EditText
+            android:id="@+id/skill_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:text="•	android programming basic"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/skill_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:text="•	HTML/CSS/XML/XSL fundamentals"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/skill_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:text="•	object oriented programming (Java)"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/skill_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:text="•	experienced user of Windows XP/7/8 OS"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="16dp" />

@@ -7,7 +7,7 @@ public class DemoApplication extends Application {
 	@Override
 	    public void onCreate() {
 	        super.onCreate();
-	      user = new User("name","proffession"); 
+	      user = new User("Rostislav Sheptykin","android developer (trainee)"); 
 	       }
 	 
 }

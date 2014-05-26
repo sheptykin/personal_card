@@ -18,7 +18,7 @@ public class EditActivity extends Activity {
 	        super.onCreate(savedInstanceState);
 	        this.app = (DemoApplication)this.getApplication();
 	        Intent i = this.getIntent();
-	        int layoutId = i.getIntExtra("curretLayout", 0);
+	        int layoutId = i.getIntExtra("currentLayout", 0);
 	       
 	        switch (layoutId)
 	        {
@@ -68,16 +68,69 @@ public class EditActivity extends Activity {
 		    }
 	
 	 		public void initTextEdits(){
-		     
-		            EditText name = (EditText)this.findViewById(R.id.editName);
+	 			
+	 			Intent i = this.getIntent();
+		        int layoutId = i.getIntExtra("currentLayout", 0);
+	 			 
+		        switch (layoutId)
+	 	        {
+	 	        case R.layout.edit_back:
+	 	        	EditText university = (EditText)this.findViewById(R.id.editUniversity);
+	 	        	university.setText(app.user.setUniversity("Oles Honchar Dnipropetrovsk National University"));
+	 	        	
+	 	        	EditText speciality = (EditText)this.findViewById(R.id.editSpeciality);
+	 	        	speciality.setText(app.user.setSpeciality("2006 - 2012	Specialist Degree in “Equipment of radio transmission, broadcasting and television”."));
+	 	        	
+	 	        	int[] skills = 
+	 	        		{
+	 	        			R.id.skill_1,
+	 	        			R.id.skill_2,
+	 	        			R.id.skill_3,
+	 	        			R.id.skill_4
+	 	        		};
+	 	        	app.user.setSkills("•	android programming basic", "•	HTML/CSS/XML/XSL fundamentals", "•	object oriented programming (Java)", "•	experienced user of Windows XP/7/8 OS"); 
+	 	        	User userSkills [] = app.user.getSkills();
+	 	        	
+	 	        	for (int k=0; k<skills.length;k++)
+		 	        	{
+	 	        		EditText skill = (EditText)this.findViewById(skills[k]);
+	 	        		
+	 	        		skill.setText(userSkills[k]);
+		 	        	}
+	 	   	 	    break;
+	 	        	
+	 	        case R.layout.edit_third:
+	 	        	EditText vk = (EditText)this.findViewById(R.id.editVk);
+		            vk.setText(app.user.setVk("Sheptykin Rostislav")); 
+		            
+		            EditText facebook = (EditText)this.findViewById(R.id.editFacebook);
+		            facebook.setText(app.user.setFacebook("Sheptykin Rostislav")); 
+		            
+		            EditText photoes = (EditText)this.findViewById(R.id.editPhotoes);
+		            photoes.setText(app.user.setPhotoes("500px.com/juki_haruki")); 
+		            
+		            EditText skype = (EditText)this.findViewById(R.id.editSkype);
+		            skype.setText(app.user.setSkype("Sheptykin Rostislav")); 
+		            
+		            EditText phone = (EditText)this.findViewById(R.id.editPhone);
+		            phone.setText(app.user.setPhone("098.296.09.00")); 
+	 	        	break;
+	 	        
+	 	        default:
+	 	        case R.layout.edit_main:
+ 	        	 	EditText name = (EditText)this.findViewById(R.id.editName);
 		            name.setText(app.user.getName()); 
 		            
 		            EditText proff = (EditText)this.findViewById(R.id.editProffession);
 		            proff.setText(app.user.getProff()); 
 		            
 		            EditText mail = (EditText)this.findViewById(R.id.editMail);
-		            mail.setText(app.user.setMail("mail")); 
-		        }
+		            mail.setText(app.user.setMail("sheptykin.rostislav@gmail.com")); 
+	 	        	break;
+	 	        }
+		     
+		           
+	   }
 	    
 	}
 
