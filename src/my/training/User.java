@@ -64,9 +64,9 @@ public class User {
 		skills.addAll(userSkills);
 	}
 	
-	public static User[] getSkills() 
+	public static String[] getSkills() 
 	{
-		return (User[]) skills.toArray(new User[skills.size()]);
+		return (String[]) skills.toArray(new String[skills.size()]);
 	}
 	
 	public String setVk(String userVk)

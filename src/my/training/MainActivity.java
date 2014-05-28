@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
 	                MainActivity.this.switchLayout();
 	            }
 	        });
-	        
+	        /*
 	        if(id==R.layout.activity_main)
 		        {
 		        DemoApplication app = (DemoApplication) this.getApplication();
@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
 		        String mail = app.user.getMail();
 		        TextView mailView = (TextView) this.findViewById(R.id.textView3);
 		        mailView.setText(mail);
-		        }
+		        }*/
 		        
 	        
 	    }
@@ -92,7 +92,7 @@ public class MainActivity extends Activity {
         if (id == R.id.action_settings) {
  
             Intent i = new Intent(this, EditActivity.class);
-            i.putExtra("curretLayout", this.layouts[this.layoutIndex]);
+            i.putExtra("currentLayout", this.layouts[this.layoutIndex]);
             this.startActivity(i);
  
             return true;

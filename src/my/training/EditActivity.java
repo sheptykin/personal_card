@@ -36,8 +36,8 @@ public class EditActivity extends Activity {
 	        	break;
 	        }
 	        
-	        this.initTextEdits();
-	     	     	      	        
+	        this.initTextEdits();}
+	     	/*     	      	        
 	        Button saveButton = (Button) this.findViewById(R.id.save);
 	        saveButton.setOnClickListener(new View.OnClickListener() {
 	            @Override
@@ -51,8 +51,8 @@ public class EditActivity extends Activity {
 	 
 	    }
 	
-			public void updateStringNames(){
-		    
+				public void updateStringNames(){
+		    // ‡ÔÔ„ÂÈ‰ ˝ÚÓ„Ó ÏÂÚÓ‰‡
 		            EditText name = (EditText)this.findViewById(R.id.editName);
 		            String value1 = name.getText().toString();
 		            this.app.user.name = value1;
@@ -65,10 +65,9 @@ public class EditActivity extends Activity {
 		            String value3 = mail.getText().toString();
 		            this.app.user.setMail(value3);
 		        
-		    }
+		    }*/
 	
 	 		public void initTextEdits(){
-	 			
 	 			Intent i = this.getIntent();
 		        int layoutId = i.getIntExtra("currentLayout", 0);
 	 			 
@@ -76,10 +75,10 @@ public class EditActivity extends Activity {
 	 	        {
 	 	        case R.layout.edit_back:
 	 	        	EditText university = (EditText)this.findViewById(R.id.editUniversity);
-	 	        	university.setText(app.user.setUniversity("Oles Honchar Dnipropetrovsk National University"));
+	 	        	university.setText(app.user.getUniversity());
 	 	        	
 	 	        	EditText speciality = (EditText)this.findViewById(R.id.editSpeciality);
-	 	        	speciality.setText(app.user.setSpeciality("2006 - 2012	Specialist Degree in ìEquipment of radio transmission, broadcasting and televisionî."));
+	 	        	speciality.setText(app.user.getSpeciality());
 	 	        	
 	 	        	int[] skills = 
 	 	        		{
@@ -88,32 +87,32 @@ public class EditActivity extends Activity {
 	 	        			R.id.skill_3,
 	 	        			R.id.skill_4
 	 	        		};
-	 	        	app.user.setSkills("ï	android programming basic", "ï	HTML/CSS/XML/XSL fundamentals", "ï	object oriented programming (Java)", "ï	experienced user of Windows XP/7/8 OS"); 
-	 	        	User userSkills [] = app.user.getSkills();
+	 	        	
+	 	        	String [] userSkills = new String [4];
+	 	        	userSkills = app.user.getSkills();
 	 	        	
 	 	        	for (int k=0; k<skills.length;k++)
 		 	        	{
 	 	        		EditText skill = (EditText)this.findViewById(skills[k]);
-	 	        		
 	 	        		skill.setText(userSkills[k]);
 		 	        	}
 	 	   	 	    break;
 	 	        	
 	 	        case R.layout.edit_third:
 	 	        	EditText vk = (EditText)this.findViewById(R.id.editVk);
-		            vk.setText(app.user.setVk("Sheptykin Rostislav")); 
+		            vk.setText(app.user.getVk()); 
 		            
 		            EditText facebook = (EditText)this.findViewById(R.id.editFacebook);
-		            facebook.setText(app.user.setFacebook("Sheptykin Rostislav")); 
+		            facebook.setText(app.user.getFacebook()); 
 		            
 		            EditText photoes = (EditText)this.findViewById(R.id.editPhotoes);
-		            photoes.setText(app.user.setPhotoes("500px.com/juki_haruki")); 
+		            photoes.setText(app.user.getPhotoes()); 
 		            
 		            EditText skype = (EditText)this.findViewById(R.id.editSkype);
-		            skype.setText(app.user.setSkype("Sheptykin Rostislav")); 
+		            skype.setText(app.user.getSkype()); 
 		            
 		            EditText phone = (EditText)this.findViewById(R.id.editPhone);
-		            phone.setText(app.user.setPhone("098.296.09.00")); 
+		            phone.setText(app.user.getPhone()); 
 	 	        	break;
 	 	        
 	 	        default:
@@ -125,7 +124,7 @@ public class EditActivity extends Activity {
 		            proff.setText(app.user.getProff()); 
 		            
 		            EditText mail = (EditText)this.findViewById(R.id.editMail);
-		            mail.setText(app.user.setMail("sheptykin.rostislav@gmail.com")); 
+		            mail.setText(app.user.getMail()); 
 	 	        	break;
 	 	        }
 		     

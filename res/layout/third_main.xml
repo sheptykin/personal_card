@@ -10,22 +10,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:gravity="bottom" >
-
-        <Button
-            android:id="@+id/save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_weight="1"
-            android:text="previous" />
+        android:gravity="center_horizontal" >
 
         <Button
             android:id="@+id/next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginRight="19dp"
-            android:layout_weight="1"
             android:text="next" />
 
     </LinearLayout>
@@ -33,7 +25,9 @@
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" >
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="104dp" >
 
         <TextView
             android:id="@+id/textView"
@@ -66,7 +60,6 @@
                 android:layout_height="wrap_content"
                 android:text="Sheptykin Rostislav"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
-
         </TableRow>
 
         <TableRow
@@ -87,7 +80,6 @@
                 android:layout_height="wrap_content"
                 android:text="Sheptykin Rostislav"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
-
         </TableRow>
 
         <TableRow
@@ -99,7 +91,7 @@
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="photoe's:"
+                android:text="photoe&apos;s:"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
@@ -108,7 +100,6 @@
                 android:layout_height="wrap_content"
                 android:text="500px.com/juki_haruki"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
-
         </TableRow>
 
         <TableRow
@@ -129,9 +120,8 @@
                 android:layout_height="wrap_content"
                 android:text="Sheptykin Rostislav"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
-
         </TableRow>
-        
+
         <TableRow
             android:id="@+id/tableRow5"
             android:layout_width="wrap_content"
@@ -150,11 +140,7 @@
                 android:layout_height="wrap_content"
                 android:text="098.296.09.00"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
-
         </TableRow>
-        
-        
-
     </TableLayout>
 
 </RelativeLayout>
