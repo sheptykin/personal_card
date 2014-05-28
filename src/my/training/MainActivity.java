@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	 protected DemoApplication app;
@@ -23,6 +22,7 @@ public class MainActivity extends Activity {
 	    @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
+	        this.app = (DemoApplication) this.getApplication();
 	  
 	        
 	    }

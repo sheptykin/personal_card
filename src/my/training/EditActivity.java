@@ -1,8 +1,12 @@
 package my.training;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class EditActivity extends Activity {
@@ -34,8 +38,8 @@ public class EditActivity extends Activity {
 	        	break;
 	        }
 	        
-	        this.initTextEdits();}
-	     	/*     	      	        
+	        this.initTextEdits();
+	     		      	        
 	        Button saveButton = (Button) this.findViewById(R.id.save);
 	        saveButton.setOnClickListener(new View.OnClickListener() {
 	            @Override
@@ -49,21 +53,59 @@ public class EditActivity extends Activity {
 	 
 	    }
 	
-				public void updateStringNames(){
-		    // аппгрейд этого метода
-		            EditText name = (EditText)this.findViewById(R.id.editName);
-		            String value1 = name.getText().toString();
-		            this.app.user.name = value1;
+			public void updateStringNames(){
+				Intent i = this.getIntent();
+		        int layoutId = i.getIntExtra("currentLayout", 0);
+	 			 
+		        switch (layoutId) 
+		        {
+		        case R.layout.back_main:
+	 	        	EditText university = (EditText)this.findViewById(R.id.editUniversity);
+	 	        	this.app.user.setUniversity(university.getText().toString());
+	 	        	
+	 	        	EditText speciality = (EditText)this.findViewById(R.id.editSpeciality);
+	 	        	this.app.user.setSpeciality(speciality.getText().toString());
+	 	        	
+	 	        	int[] skills = 
+	 	        		{
+	 	        			R.id.skill_1,
+	 	        			R.id.skill_2,
+	 	        			R.id.skill_3,
+	 	        			R.id.skill_4
+	 	        		};
+	 	        	
+	 	        	ArrayList<String> userSkills = new ArrayList<String>();
+	 	        	for (int k=0; k<skills.length; k++)
+	 	        	{
+	 	        		EditText skill = (EditText)this.findViewById(skills[k]);
+	 	        		userSkills.add(skill.getText().toString());
+	 	        	}
+	 	        	this.app.user.setSkills(userSkills);
+	 	        	break;
+	 	        	
+	 	        case R.layout.third_main:
+	 	        	EditText vk = (EditText)this.findViewById(R.id.editVk);
+	 	        	this.app.user.setVk(vk.getText().toString());
+	 	        	
+	 	        	EditText facebook = (EditText)this.findViewById(R.id.editFacebook);
+	 	        	this.app.user.setFacebook(facebook.getText().toString()); 
 		            
-		            EditText proff = (EditText)this.findViewById(R.id.editProffession);
-		            String value2 = proff.getText().toString();
-		            this.app.user.proffession = value2;
+		            EditText photoes = (EditText)this.findViewById(R.id.editPhotoes);
+		            this.app.user.setPhotoes(photoes.getText().toString()); 
 		            
-		            EditText mail = (EditText)this.findViewById(R.id.editMail);
-		            String value3 = mail.getText().toString();
-		            this.app.user.setMail(value3);
-		        
-		    }*/
+		            EditText skype = (EditText)this.findViewById(R.id.editSkype);
+		            this.app.user.setSkype(skype.getText().toString());  
+		            
+		            EditText phone = (EditText)this.findViewById(R.id.editPhone);
+		            this.app.user.setPhone(phone.getText().toString()); 
+	 	        	break;
+	 	        	
+	 	        	
+		   }
+				
+	           
+	        
+	    }
 	
 	 		public void initTextEdits(){
 	 			Intent i = this.getIntent();
