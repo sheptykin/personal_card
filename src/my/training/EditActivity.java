@@ -3,8 +3,6 @@ package my.training;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 public class EditActivity extends Activity {
@@ -73,7 +71,7 @@ public class EditActivity extends Activity {
 	 			 
 		        switch (layoutId)
 	 	        {
-	 	        case R.layout.edit_back:
+	 	        case R.layout.back_main:
 	 	        	EditText university = (EditText)this.findViewById(R.id.editUniversity);
 	 	        	university.setText(app.user.getUniversity());
 	 	        	
@@ -88,17 +86,17 @@ public class EditActivity extends Activity {
 	 	        			R.id.skill_4
 	 	        		};
 	 	        	
-	 	        	String [] userSkills = new String [4];
-	 	        	userSkills = app.user.getSkills();
+	 	        	String [] userSkills = app.user.getSkills();
 	 	        	
-	 	        	for (int k=0; k<skills.length;k++)
+	 	        	int n =java.lang.Math.min(skills.length,userSkills.length);
+	 	        	for (int k=0; k<n; k++)
 		 	        	{
 	 	        		EditText skill = (EditText)this.findViewById(skills[k]);
 	 	        		skill.setText(userSkills[k]);
 		 	        	}
 	 	   	 	    break;
 	 	        	
-	 	        case R.layout.edit_third:
+	 	        case R.layout.third_main:
 	 	        	EditText vk = (EditText)this.findViewById(R.id.editVk);
 		            vk.setText(app.user.getVk()); 
 		            
@@ -116,7 +114,7 @@ public class EditActivity extends Activity {
 	 	        	break;
 	 	        
 	 	        default:
-	 	        case R.layout.edit_main:
+	 	        case R.layout.activity_main:
  	        	 	EditText name = (EditText)this.findViewById(R.id.editName);
 		            name.setText(app.user.getName()); 
 		            

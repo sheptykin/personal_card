@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class User {
 	String name, proffession, mail, university, speciality, vk, facebook, photoes, skype, phone;
-	static ArrayList <String> skills  = new ArrayList <String> () ;
+	ArrayList <String> skills  = new ArrayList <String> () ;
 	
 	
 	public User (String userName, String userProff)
@@ -64,7 +64,7 @@ public class User {
 		skills.addAll(userSkills);
 	}
 	
-	public static String[] getSkills() 
+	public  String[] getSkills() 
 	{
 		return (String[]) skills.toArray(new String[skills.size()]);
 	}
