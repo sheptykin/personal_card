@@ -24,10 +24,11 @@
             android:layout_marginTop="20dp"
             android:text="education:"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="20dp"
+            android:textSize="17sp"
             android:textStyle="italic" />
 
         <TextView
+            android:id="@+id/mainUniversity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_horizontal"
@@ -37,6 +38,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/mainSpeciality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_horizontal"
@@ -63,10 +65,11 @@
             android:layout_marginTop="20dp"
             android:text="skills:"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="20dp"
+            android:textSize="17sp"
             android:textStyle="italic" />
 
         <TextView
+            android:id="@+id/mainSkill_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_horizontal"
@@ -75,6 +78,7 @@
             android:textSize="16dp" />
 
         <TextView
+            android:id="@+id/mainSkill_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_horizontal"
@@ -83,6 +87,7 @@
             android:textSize="16dp" />
 
         <TextView
+            android:id="@+id/mainSkill_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_horizontal"
@@ -91,6 +96,7 @@
             android:textSize="16dp" />
 
         <TextView
+            android:id="@+id/mainSkill_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_horizontal"
@@ -101,6 +107,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -117,5 +124,60 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/linearLayout3"
+        android:layout_alignLeft="@id/linearLayout2"
+        android:layout_alignRight="@id/linearLayout2"
+        android:layout_below="@id/linearLayout2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+        
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:layout_marginTop="20dp"
+             android:text="contact&apos;s:"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textSize="17sp"
+             android:textStyle="italic" />
+
+         <TextView
+             android:id="@+id/mainMail"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="sheptykin.rostislav@gmail.com"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textSize="16dp" />
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal" >
+             
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="left"
+                 android:layout_marginRight="10dp"
+                 android:text="skype:"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textSize="16dp" />
+
+             <TextView
+                 android:id="@+id/mainSkype"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:text="Sheptykin Rostislav"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textSize="16dp" />
+
+         </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

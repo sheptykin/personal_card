@@ -69,41 +69,7 @@ public class User {
 		return (String[]) skills.toArray(new String[skills.size()]);
 	}
 	
-	public String setVk(String userVk)
-	{
-		vk = userVk ;
-		return vk;
-	}
-	
-	public String getVk()
-	{
-		
-		return vk;
-	}
-	
-	public String setFacebook(String userFacebook)
-	{
-		facebook = userFacebook ;
-		return facebook;
-	}
-	
-	public String getFacebook()
-	{
-		
-		return facebook;
-	}
-	
-	public String setPhotoes(String userPhotoes)
-	{
-		photoes = userPhotoes ;
-		return photoes;
-	}
-	
-	public String getPhotoes()
-	{
-		
-		return photoes;
-	}
+
 	
 	public String setSkype(String userSkype)
 	{
